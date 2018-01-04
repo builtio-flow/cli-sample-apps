@@ -1,0 +1,18 @@
+{
+  "name": "Github",
+  "description": "Version Control System",
+  "triggers": [
+    "push",
+    "issue_created"
+  ],
+  "actions": [
+    "repo_details",
+    "get_branch"
+  ],
+  "version": 1,
+  "auth_type": "basic",
+  "docs_link": "http://docs.example.com",
+  "lookup": true,
+  "audience": [
+  ]
+}

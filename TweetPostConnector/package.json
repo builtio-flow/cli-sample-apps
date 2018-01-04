@@ -1,0 +1,10 @@
+{
+  "name": "oauthapp",
+  "version": "1.0.0",
+  "description": "Sample app to test oauth",
+  "dependencies": {
+    "flow-cli-sdk": "*",
+    "request": "2.55.0",
+    "twitter": "^1.7.1"
+  }
+}
