@@ -170,7 +170,9 @@ module.exports = {
     var request = require('request');
     getUserInfo(input.auth.access_token)
     .then(user => {
-      options.setMeta('timestamp', Date.now());// for setting meta like last synced time
+      options.setMeta({
+          'timestamp': Date.now()
+      });// for setting meta like last synced time
       request({
         url: 'https://api.github.com/repos/' + user.login + '/' + input.repo + '/commits',
         headers: {
