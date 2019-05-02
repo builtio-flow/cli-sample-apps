@@ -37,5 +37,5 @@
       },
       "query": {}
   },
-  "redirectURL": "https://stag-flowoauth.built.io/oauth/todoist_483c63cc53/cli/return"
+  "redirectURL": "https://auth-int.webmethods.io/auth/oauth/todoist_483c63cc53/cli/return"
 }
