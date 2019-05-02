@@ -1,0 +1,19 @@
+{
+  "name": "wunderlist",
+  "version": "1.0.0",
+  "description": "Wunderlist",
+  "dependencies": {
+    "@builtioflow/cli-sdk": "*",
+    "lodash": "^4.17.11",
+    "request": "2.55.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-html-reporter": "^0.5.2"
+  },
+  "scripts": {
+    "eslint": "./node_modules/.bin/eslint ./",
+    "eslint_config": "./node_modules/.bin/eslint --init",
+    "eslint_report": "node ./node_modules/.bin/eslint ./ -f node_modules/eslint-html-reporter/reporter.js -o ./report/report.html"
+  }
+}

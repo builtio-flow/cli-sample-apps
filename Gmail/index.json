@@ -1,0 +1,46 @@
+{
+  "name": "Gmail",
+  "description": "Gmail",
+  "triggers": [
+    "/v9/new_email",
+    "/v9/new_attachment",
+    "/v9/new_labeled_email",
+    "/v9/new_label",
+    "/v9/new_starred_email"
+  ],
+  "actions": [],
+  "version": 1,
+  "auth_type": "oauth",
+  "icon": "gmail",
+  "docs_link": "http://docs.example.com",
+  "lookup": true,
+  "lookup_attachments": [
+    {
+      "lookup_id": "label",
+      "trigger_id": "/v9/new_email",
+      "field_id": "label",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "label",
+      "trigger_id": "/v9/new_labeled_email",
+      "field_id": "label",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "label",
+      "trigger_id": "/v9/new_attachment",
+      "field_id": "label",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "label",
+      "trigger_id": "/v9/new_starred_email",
+      "field_id": "label",
+      "dependencies": []
+    }
+  ],
+  "audience": [
+  ],
+  "oauth_provider": "gmail"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "excel_online",
+  "version": "1.0.0",
+  "description": "excel_online",
+  "dependencies": {
+    "@builtioflow/cli-sdk": "0.0.2",
+    "lodash": "^4.17.11",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-html-reporter": "^0.7.1"
+  },
+  "scripts": {
+    "eslint": "./node_modules/.bin/eslint ./",
+    "eslint_config": "./node_modules/.bin/eslint --init",
+    "eslint_report": "node ./node_modules/.bin/eslint ./ -f node_modules/eslint-html-reporter/reporter.js -o ./report/report.html"
+  }
+}

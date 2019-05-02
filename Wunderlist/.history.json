@@ -1,0 +1,9 @@
+
+{"operation":"Auth","message":"Auth created of oauth","created_at":1537869771216}
+{"operation":"Trigger","message":{"operation":"Created trigger","message":"Name: new_task","created_at":1537873287245},"created_at":1537873288978}
+{"operation":"Auth","message":"Auth created of oauth","created_at":1537873595454}
+{"operation":"Trigger","message":{"operation":"Created lookup","message":"Name: fetch_list","created_at":1537883197933},"created_at":1537883199665}
+{"operation":"Trigger","message":{"operation":"Created trigger","message":"Name: update_task","created_at":1538370394907},"created_at":1538370396645}
+{"operation":"Trigger","message":{"operation":"Created trigger","message":"Name: subtask_modified","created_at":1538485953283},"created_at":1538485954507}
+{"operation":"Deployed Connector","message":"Version: 1","created_at":1538634106358}
+{"operation":"Deployed Connector","message":"Version: 1","created_at":1538749792411}

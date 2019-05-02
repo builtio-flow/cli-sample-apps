@@ -1,0 +1,720 @@
+{
+  "name": "Trello",
+  "description": "webhookk implementation",
+  "oauth_provider": "trello",
+  "triggers": [
+    "/v6/new_board",
+    "/v6/update_board",
+    "/v6/member_added_to_board",
+    "/v6/new_list",
+    "/v6/update_list",
+    "/v6/list_moved_to_other_board",
+    "/v6/new_card",
+    "/v6/update_card",
+    "/v6/delete_card",
+    "/v6/new_checklist_on_card",
+    "/v6/checklist_item_created",
+    "/v6/checklist_renamed",
+    "/v6/checklist_item_completed"
+  ],
+  "actions": [
+    "/v2/get_card_details",
+    "/v1/create_label",
+    "/v1/rename_checklist",
+    "/v1/archive_card",
+    "/v1/unarchive_card",
+    "/v1/rename_card",
+    "/v1/rename_board",
+    "/v1/create_list",
+    "/v1/archive_list",
+    "/v1/unarchive_list",
+    "/v1/rename_list",
+    "/v1/add_label_to_card",
+    "/v1/move_card_to_list",
+    "/v1/remove_member_from_card",
+    "/v1/remove_label_from_card",
+    "/v1/add_board_member_to_card",
+    "/v1/add_member_to_board",
+    "/v1/get_checklists_on_card",
+    "/v1/get_cards",
+    "/v1/get_board_members",
+    "/v1/create_board",
+    "/v1/update_card_status",
+    "/v1/get_board_labels",
+    "/v4/delete_card",
+    "/v4/get_all_board_lists",
+    "/v1/search_card",
+    "/v1/get_teams",
+    "/v1/get_team_boards"
+  ],
+  "version": 1,
+  "icon": "trello",
+  "auth_type": "oauth",
+  "docs_link": "http://docs.example.com",
+  "triggerVersion": "v6",
+  "triggerType": "webhook",
+  "lookup": true,
+  "lookup_attachments": [
+    {
+      "lookup_id": "member_id",
+      "trigger_id": "/v6/new_board",
+      "field_id": "member_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "board_id",
+      "trigger_id": "/v6/update_board",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "board_id",
+      "trigger_id": "/v6/member_added_to_board",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "board_id",
+      "trigger_id": "/v6/new_list",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "trigger_id": "/v6/update_list",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "trigger_id": "/v6/update_list",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "trigger_id": "/v6/list_moved_to_other_board",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "trigger_id": "/v6/list_moved_to_other_board",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "trigger_id": "/v6/new_card",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "trigger_id": "/v6/new_card",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "trigger_id": "/v6/update_card",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "trigger_id": "/v6/update_card",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "trigger_id": "/v6/delete_card",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "trigger_id": "/v6/delete_card",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "trigger_id": "/v6/new_checklist_on_card",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "trigger_id": "/v6/new_checklist_on_card",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "trigger_id": "/v6/checklist_item_created",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "trigger_id": "/v6/checklist_item_created",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "trigger_id": "/v6/checklist_renamed",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "trigger_id": "/v6/checklist_renamed",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "trigger_id": "/v6/checklist_item_completed",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "trigger_id": "/v6/checklist_item_completed",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/create_list",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/archive_list",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "unarchive_list",
+      "action_id": "/v1/unarchive_list",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/create_list",
+      "field_id": "idListSource",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/update_list",
+      "field_id": "idBoard",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/update_list",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/rename_list",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/rename_list",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/unarchive_list",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/archive_list",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/update_list",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/rename_board",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/rename_card",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/rename_card",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "card_id",
+      "action_id": "/v1/rename_card",
+      "field_id": "card_id",
+      "dependencies": [
+        "board_id",
+        "list_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/unarchive_card",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/unarchive_card",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "unarchive_card",
+      "action_id": "/v1/unarchive_card",
+      "field_id": "card_id",
+      "dependencies": [
+        "board_id",
+        "list_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/archive_card",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/archive_card",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "card_id",
+      "action_id": "/v1/archive_card",
+      "field_id": "card_id",
+      "dependencies": [
+        "board_id",
+        "list_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/rename_checklist",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/rename_checklist",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "card_id",
+      "action_id": "/v1/rename_checklist",
+      "field_id": "card_id",
+      "dependencies": [
+        "board_id",
+        "list_id"
+      ]
+    },
+    {
+      "lookup_id": "checklist_id",
+      "action_id": "/v1/rename_checklist",
+      "field_id": "checklist_id",
+      "dependencies": [
+        "board_id",
+        "list_id",
+        "card_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/get_card_details",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/get_card_details",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "card_id",
+      "action_id": "/v1/get_card_details",
+      "field_id": "card_id",
+      "dependencies": [
+        "board_id",
+        "list_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v2/get_card_details",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v2/get_card_details",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "card_id",
+      "action_id": "/v2/get_card_details",
+      "field_id": "card_id",
+      "dependencies": [
+        "board_id",
+        "list_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/add_label_to_card",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/add_label_to_card",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "card_id",
+      "action_id": "/v1/add_label_to_card",
+      "field_id": "card_id",
+      "dependencies": [
+        "board_id",
+        "list_id"
+      ]
+    },
+    {
+      "lookup_id": "board_label",
+      "action_id": "/v1/add_label_to_card",
+      "field_id": "label_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/move_card_to_list",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/move_card_to_list",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "card_id",
+      "action_id": "/v1/move_card_to_list",
+      "field_id": "card_id",
+      "dependencies": [
+        "board_id",
+        "list_id"
+      ]
+    },
+    {
+      "lookup_id": "board_list",
+      "action_id": "/v1/move_card_to_list",
+      "field_id": "new_list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/remove_member_from_card",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/remove_member_from_card",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "card_id",
+      "action_id": "/v1/remove_member_from_card",
+      "field_id": "card_id",
+      "dependencies": [
+        "board_id",
+        "list_id"
+      ]
+    },
+    {
+      "lookup_id": "card_member",
+      "action_id": "/v1/remove_member_from_card",
+      "field_id": "member_id",
+      "dependencies": [
+        "card_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/remove_label_from_card",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/remove_label_from_card",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "card_id",
+      "action_id": "/v1/remove_label_from_card",
+      "field_id": "card_id",
+      "dependencies": [
+        "board_id",
+        "list_id"
+      ]
+    },
+    {
+      "lookup_id": "card_label",
+      "action_id": "/v1/remove_label_from_card",
+      "field_id": "label_id",
+      "dependencies": [
+        "card_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/add_board_member_to_card",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/add_board_member_to_card",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "card_id",
+      "action_id": "/v1/add_board_member_to_card",
+      "field_id": "card_id",
+      "dependencies": [
+        "board_id",
+        "list_id"
+      ]
+    },
+    {
+      "lookup_id": "board_member",
+      "action_id": "/v1/add_board_member_to_card",
+      "field_id": "member_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/add_member_to_board",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/get_cards",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "board_list",
+      "action_id": "/v1/get_cards",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/get_checklists_on_card",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/get_checklists_on_card",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "card_id",
+      "action_id": "/v1/get_checklists_on_card",
+      "field_id": "card_id",
+      "dependencies": [
+        "board_id",
+        "list_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/get_board_members",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v4/delete_card",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v4/delete_card",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "card_id",
+      "action_id": "/v4/delete_card",
+      "field_id": "card_id",
+      "dependencies": [
+        "board_id",
+        "list_id"
+      ]
+    },
+    {
+      "lookup_id": "team_id",
+      "action_id": "/v1/create_board",
+      "field_id": "idOrganization",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/get_board_labels",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/create_label",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v1/update_card_status",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "list_id",
+      "action_id": "/v1/update_card_status",
+      "field_id": "list_id",
+      "dependencies": [
+        "board_id"
+      ]
+    },
+    {
+      "lookup_id": "card_id",
+      "action_id": "/v1/update_card_status",
+      "field_id": "card_id",
+      "dependencies": [
+        "board_id",
+        "list_id"
+      ]
+    },
+    {
+      "lookup_id": "board_id",
+      "action_id": "/v4/get_all_board_lists",
+      "field_id": "board_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "team_id",
+      "action_id": "/v1/get_team_boards",
+      "field_id": "team_id",
+      "dependencies": []
+    }
+  ],
+  "audience": []
+}

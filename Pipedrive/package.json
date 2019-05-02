@@ -1,0 +1,10 @@
+{
+  "name": "pipedrive",
+  "version": "1.0.0",
+  "description": "Pipedrive",
+  "dependencies": {
+    "request": "2.55.0",
+    "@builtioflow/cli-sdk": "*",
+    "pipedrive": "1.7.3"
+  }
+}

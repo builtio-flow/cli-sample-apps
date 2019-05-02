@@ -1,0 +1,31 @@
+{
+  "name": "Box",
+  "description": "Box",
+  "triggers": [
+    "/v9/file_or_folder_operation",
+    "/v9/note_updated"
+  ],
+  "icon": "box",
+  "actions": [],
+  "version": 1,
+  "auth_type": "oauth",
+  "docs_link": "http://docs.example.com",
+  "triggerVersion": "v9",
+  "lookup": true,
+  "lookup_attachments": [
+    {
+      "lookup_id": "files_id",
+      "trigger_id": "/v9/file_or_folder_operation",
+      "field_id": "file_id",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "files_id",
+      "trigger_id": "/v9/note_updated",
+      "field_id": "file_id",
+      "dependencies": []
+    }
+  ],
+  "audience": [
+  ]
+}

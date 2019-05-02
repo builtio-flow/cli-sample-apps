@@ -1,0 +1,100 @@
+{
+  "name": "Pipedrive",
+  "description": "Pipedrive",
+  "triggers": [],
+  "actions": [
+    "/v6/pipedrive-deal-add",
+    "/v6/pipedrive-deal-update",
+    "/v4/pipedrive-deal-delete"
+  ],
+  "version": 1,
+  "auth_type": "custom",
+  "docs_link": "https://flowdocs.built.io/activity/pipedrive",
+  "lookup": true,
+  "lookup_attachments": [
+    {
+      "lookup_id": "currency",
+      "action_id": "/v6/pipedrive-deal-add",
+      "field_id": "currency",
+      "searchable": true,
+      "dependencies": []
+    },
+    {
+      "lookup_id": "user_id",
+      "action_id": "/v6/pipedrive-deal-add",
+      "field_id": "user_id",
+      "searchable": true,
+      "dependencies": []
+    },
+    {
+      "lookup_id": "person_id",
+      "action_id": "/v6/pipedrive-deal-add",
+      "field_id": "person_id",
+      "searchable": true,
+      "dependencies": []
+    },
+    {
+      "lookup_id": "org_id",
+      "action_id": "/v6/pipedrive-deal-add",
+      "field_id": "org_id",
+      "searchable": true,
+      "dependencies": []
+    },
+    {
+      "lookup_id": "stage_id",
+      "action_id": "/v6/pipedrive-deal-add",
+      "field_id": "stage_id",
+      "searchable": true,
+      "dependencies": []
+    },
+    {
+      "lookup_id": "deal_id",
+      "action_id": "/v6/pipedrive-deal-update",
+      "field_id": "id",
+      "searchable": true,
+      "dependencies": []
+    },
+    {
+      "lookup_id": "currency",
+      "action_id": "/v6/pipedrive-deal-update",
+      "field_id": "currency",
+      "searchable": true,
+      "dependencies": []
+    },
+    {
+      "lookup_id": "user_id",
+      "action_id": "/v6/pipedrive-deal-update",
+      "field_id": "user_id",
+      "searchable": true,
+      "dependencies": []
+    },
+    {
+      "lookup_id": "person_id",
+      "action_id": "/v6/pipedrive-deal-update",
+      "field_id": "person_id",
+      "searchable": true,
+      "dependencies": []
+    },
+    {
+      "lookup_id": "org_id",
+      "action_id": "/v6/pipedrive-deal-update",
+      "field_id": "org_id",
+      "searchable": true,
+      "dependencies": []
+    },
+    {
+      "lookup_id": "stage_id",
+      "action_id": "/v6/pipedrive-deal-update",
+      "field_id": "stage_id",
+      "searchable": true,
+      "dependencies": []
+    },
+    {
+      "lookup_id": "deal_id",
+      "action_id": "/v4/pipedrive-deal-delete",
+      "field_id": "id",
+      "dependencies": []
+    }
+  ],
+  "connection": "pipedrive"
+}

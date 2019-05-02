@@ -1,0 +1,13 @@
+
+{"operation":"init","message":"Initialize app : Trello","created_at":1532508390932}
+{"operation":"Auth","message":"Auth created of oauth","created_at":1532508467528}
+{"operation":"Trigger","message":{"operation":"Created trigger","message":"Name: update_member_added_to_board","created_at":1532508622368},"created_at":1532508624406}
+{"operation":"Trigger","message":{"operation":"Created trigger","message":"Name: member_added_to_board","created_at":1532508771154},"created_at":1532508775621}
+{"operation":"Trigger","message":{"operation":"Created lookup","message":"Name: board_id","created_at":1532509747541},"created_at":1532509749381}
+{"operation":"Trigger","message":{"operation":"Created action","message":"Name: add_label_to_card","created_at":1537742834835},"created_at":1537742847335}
+{"operation":"Trigger","message":{"operation":"Created action","message":"Name: remove_label_to_card","created_at":1537771850608},"created_at":1537771852344}
+{"operation":"Trigger","message":{"operation":"Created action","message":"Name: remove_member_from_card","created_at":1537780037147},"created_at":1537780042673}
+{"operation":"Trigger","message":{"operation":"Created action","message":"Name: remove_label_from_card","created_at":1537780058559},"created_at":1537780060434}
+{"operation":"Trigger","message":{"operation":"Created lookup","message":"Name: board_member","created_at":1537852220535},"created_at":1537852222160}
+{"operation":"Trigger","message":{"operation":"Created lookup","message":"Name: board_label","created_at":1537852276698},"created_at":1537852278437}
+{"operation":"Trigger","message":{"operation":"Created lookup","message":"Name: card_label","created_at":1537852288312},"created_at":1537852290864}

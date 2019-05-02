@@ -1,0 +1,18 @@
+{
+  "name": "trello",
+  "version": "1.0.0",
+  "description": "webhookk implementation",
+  "dependencies": {
+    "@builtioflow/cli-sdk": "*",
+    "bluebird": "^3.5.1",
+    "request": "2.55.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-html-reporter": "^0.5.2"
+  },
+  "scripts": {
+    "es": "./node_modules/.bin/eslint ./",
+    "eslint-report": "node ./node_modules/.bin/eslint ./ -f node_modules/eslint-html-reporter/reporter.js -o ./report/report.html"
+  }
+}

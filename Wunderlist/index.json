@@ -1,0 +1,132 @@
+{
+  "name": "Wunderlist",
+  "description": "Wunderlist",
+  "triggers": [
+    "/v4/task_created",
+    "/v4/task_updated",
+    "/v4/comment_added_to_task",
+    "/v4/task_completed",
+    "/v4/task_incomplete",
+    "/v4/task_deleted",
+    "/v4/subtask_created",
+    "/v4/subtask_modified",
+    "/v4/subtask_completed",
+    "/v4/subtask_incomplete",
+    "/v4/subtask_deleted"
+  ],
+  "actions": [],
+  "version": 1,
+  "auth_type": "oauth",
+  "docs_link": "http://docs.example.com",
+  "icon": "wunderlist",
+  "lookup": true,
+  "lookup_attachments": [
+    {
+      "lookup_id": "fetch_list",
+      "trigger_id": "/v4/task_created",
+      "field_id": "wunderlist",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_list",
+      "trigger_id": "/v4/task_completed",
+      "field_id": "wunderlist",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_list",
+      "trigger_id": "/v4/comment_added_to_task",
+      "field_id": "wunderlist",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_list",
+      "trigger_id": "/v4/task_deleted",
+      "field_id": "wunderlist",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_list",
+      "trigger_id": "/v4/task_updated",
+      "field_id": "wunderlist",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_list",
+      "trigger_id": "/v4/subtask_created",
+      "field_id": "wunderlist",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_tasks",
+      "trigger_id": "/v4/subtask_created",
+      "field_id": "wunderlist_tasks",
+      "dependencies": [
+        "wunderlist"
+      ]
+    },
+    {
+      "lookup_id": "fetch_list",
+      "trigger_id": "/v4/subtask_completed",
+      "field_id": "wunderlist",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_tasks",
+      "trigger_id": "/v4/subtask_completed",
+      "field_id": "wunderlist_tasks",
+      "dependencies": [
+        "wunderlist"
+      ]
+    },
+    {
+      "lookup_id": "fetch_list",
+      "trigger_id": "/v4/subtask_deleted",
+      "field_id": "wunderlist",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_tasks",
+      "trigger_id": "/v4/subtask_deleted",
+      "field_id": "wunderlist_tasks",
+      "dependencies": [
+        "wunderlist"
+      ]
+    },
+    {
+      "lookup_id": "fetch_list",
+      "trigger_id": "/v4/subtask_modified",
+      "field_id": "wunderlist",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_tasks",
+      "trigger_id": "/v4/subtask_modified",
+      "field_id": "wunderlist_tasks",
+      "dependencies": [
+        "wunderlist"
+      ]
+    },
+    {
+      "lookup_id": "fetch_list",
+      "trigger_id": "/v4/task_incomplete",
+      "field_id": "wunderlist",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_list",
+      "trigger_id": "/v4/subtask_incomplete",
+      "field_id": "wunderlist",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_tasks",
+      "trigger_id": "/v4/subtask_incomplete",
+      "field_id": "wunderlist_tasks",
+      "dependencies": [
+        "wunderlist"
+      ]
+    }
+  ],
+  "appId": "115826f5-7851-48c5-a2a6-93f80acf1ad4"
+}

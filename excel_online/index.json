@@ -1,0 +1,78 @@
+{
+  "name": "Excel Online",
+  "description": "Excel Online",
+  "triggers": [
+    "/v3/new_sheet",
+    "/v3/new_row",
+    "/v3/new_row_in_table"
+  ],
+  "actions": [],
+  "icon": "excel_online",
+  "version": 1,
+  "auth_type": "oauth",
+  "docs_link": "https://flowdocs.built.io/guide/triggers",
+  "lookup": true,
+  "lookup_attachments": [
+    {
+      "lookup_id": "folder_name",
+      "trigger_id": "/v3/new_sheet",
+      "field_id": "folderId",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "workbook_name",
+      "trigger_id": "/v3/new_sheet",
+      "field_id": "workbookId",
+      "dependencies": [
+        "folderId"
+      ]
+    },
+    {
+      "lookup_id": "folder_name",
+      "trigger_id": "/v3/new_row",
+      "field_id": "folderId",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "workbook_name",
+      "trigger_id": "/v3/new_row",
+      "field_id": "workbookId",
+      "dependencies": [
+        "folderId"
+      ]
+    },
+    {
+      "lookup_id": "sheet_name",
+      "trigger_id": "/v3/new_row",
+      "field_id": "sheetName",
+      "dependencies": [
+        "workbookId"
+      ]
+    },
+    {
+      "lookup_id": "table_name",
+      "trigger_id": "/v3/new_row_in_table",
+      "field_id": "tableName",
+      "dependencies": [
+        "workbookId"
+      ]
+    },
+    {
+      "lookup_id": "folder_name",
+      "trigger_id": "/v3/new_row_in_table",
+      "field_id": "folderId",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "workbook_name",
+      "trigger_id": "/v3/new_row_in_table",
+      "field_id": "workbookId",
+      "dependencies": [
+        "folderId"
+      ]
+    }
+  ],
+  "audience": [
+  ],
+  "oauth_provider": "excel_online"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "box",
+  "version": "1.0.0",
+  "description": "Box",
+  "dependencies": {
+    "@builtioflow/cli-sdk": "*",
+    "bluebird": "^3.5.2",
+    "json-stringify-safe": "^5.0.1",
+    "lodash": "^4.17.10",
+    "request": "^2.55.0",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-html-reporter": "^0.5.2"
+  },
+  "scripts": {
+    "eslint": "./node_modules/.bin/eslint ./",
+    "eslint_config": "./node_modules/.bin/eslint --init",
+    "eslint_report": "node ./node_modules/.bin/eslint ./ -f node_modules/eslint-html-reporter/reporter.js -o ./report/report.html"
+  }
+}

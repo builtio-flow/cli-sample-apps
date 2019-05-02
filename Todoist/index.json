@@ -1,0 +1,61 @@
+{
+  "name": "Todoist_1",
+  "description": "Todoist",
+  "triggers": [],
+  "actions": [
+    "/v2/get_project_details",
+    "/v2/delete_project",
+    "/v2/delete_task",
+    "/v2/add_new_project",
+    "/v2/add_new_task",
+    "/v2/change_task_status_to_complete",
+    "/v2/change_task_status_to_incomplete",
+    "/v2/update_project",
+    "/v2/update_task"
+  ],
+  "version": 1,
+  "icon": "todoist",
+  "auth_type": "oauth",
+  "docs_link": "http://docs.example.com",
+  "oauth_provider": "todoist",
+  "lookup": true,
+  "lookup_attachments": [
+    {
+      "lookup_id": "fetch_projects",
+      "action_id": "/v2/get_project_details",
+      "field_id": "projectid",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_projects",
+      "action_id": "/v2/add_new_task",
+      "field_id": "projectid",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_projects",
+      "action_id": "/v2/change_task_status_to_complete",
+      "field_id": "projectid",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_projects",
+      "action_id": "/v2/change_task_status_to_incomplete",
+      "field_id": "projectid",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_projects",
+      "action_id": "/v2/update_project",
+      "field_id": "projectid",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "fetch_tasks",
+      "action_id": "/v2/update_task",
+      "field_id": "taskid",
+      "dependencies": []
+    }
+  ],
+  "appId": "9fadea4c-7457-4ec8-9790-de74fdadac1a"
+}

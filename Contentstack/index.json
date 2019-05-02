@@ -1,0 +1,50 @@
+{
+  "name": "Contentstack",
+  "description": "Contentstack",
+  "triggers": [],
+  "actions": [],
+  "version": 1,
+  "auth_type": "custom",
+  "docs_link": "http://docs.example.com",
+  "lookup": true,
+  "lookup_attachments": [
+    {
+      "lookup_id": "get_stacks",
+      "trigger_id": "/v5/entry_published",
+      "field_id": "stack_api_key",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "get_stacks",
+      "trigger_id": "/v5/entry_unpublished",
+      "field_id": "stack_api_key",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "get_stacks",
+      "trigger_id": "/v5/entry_created",
+      "field_id": "stack_api_key",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "get_stacks",
+      "trigger_id": "/v5/entry_deleted",
+      "field_id": "stack_api_key",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "get_stacks",
+      "trigger_id": "/v5/entry_updated",
+      "field_id": null,
+      "dependencies": []
+    },
+    {
+      "lookup_id": "get_stacks",
+      "trigger_id": "/v5/entry_updated",
+      "field_id": "stack_api_key",
+      "dependencies": []
+    }
+  ],
+  "audience": [
+  ]
+}

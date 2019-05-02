@@ -1,0 +1,11 @@
+{
+  "name": "todoist_1",
+  "version": "1.0.0",
+  "description": "Todoist",
+  "dependencies": {
+    "@builtioflow/cli-sdk": "*",
+    "loadash": "^1.0.0",
+    "request": "2.55.0",
+    "uuid": "^3.3.2"
+  }
+}

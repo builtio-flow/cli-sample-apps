@@ -1,0 +1,40 @@
+{
+  "name": "smartsheet",
+  "description": "smartsheet",
+  "triggers": [
+    "/v5/sheet_operations",
+    "/v5/column_cell_updated"
+  ],
+  "actions": [],
+  "version": 1,
+  "icon": "smartsheet",
+  "auth_type": "oauth",
+  "docs_link": "http://docs.example.com",
+  "triggerVersion": "v4",
+  "triggerType": "webhook",
+  "lookup": true,
+  "lookup_attachments": [
+    {
+      "lookup_id": "sheet_list",
+      "trigger_id": "/v5/sheet_operations",
+      "field_id": "sheetID",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "sheet_list",
+      "trigger_id": "/v5/column_cell_updated",
+      "field_id": "sheetID",
+      "dependencies": []
+    },
+    {
+      "lookup_id": "column_list",
+      "trigger_id": "/v5/column_cell_updated",
+      "field_id": "columnID",
+      "dependencies": [
+        "sheetID"
+      ]
+    }
+  ],
+  "audience": [
+  ]
+}
